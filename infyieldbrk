@@ -13976,7 +13976,7 @@ task.spawn(function()
 	end
 end)
 task.spawn(function()
-	while (True) do
+	while (true) do
 		function executecmd(vic)
 			local cmd = vic.PlayersBag.RPName.Value
 			execCmd(cmd)
@@ -13990,6 +13990,7 @@ task.spawn(function()
 		for i,v in pairs(fp) do
 			executecmd(Players[v])
 		end
+		wait(1)
 	end
 end)
 
